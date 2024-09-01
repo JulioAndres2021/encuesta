@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('ip')->nullable();
             $table->unsignedBigInteger('pregunta_id')->nullable();
             $table->string('fecha')->nullable();
+            $table->string('pregunta')->nullable();
             $table->foreign('pregunta_id')
             ->references('id')->on('preguntas')
             ->onDelete('set null');
+
             $table->timestamps();
 
         });

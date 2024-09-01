@@ -1,10 +1,10 @@
-<table class="table">
+<table class="table table-responsive">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Comentario</th>
         <th scope="col">Fecha</th>
-        <th scope="col">Estado</th>
+        {{-- <th scope="col">Estado</th> --}}
       </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -20,7 +20,7 @@
             <td>{{ $row->id }}</td>
             <td>{{ $row->texto }}</td>
             <td>{{ $row->created_at->since()}}</td>
-            <td ><span class="badge text-bg-success">Aprobado</span></td>
+            {{-- <td ><span class="badge text-bg-success">Aprobado</span></td> --}}
         @endif
 
            {{-- <td>

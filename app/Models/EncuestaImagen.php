@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class EncuestaImagen extends Model
 {
@@ -21,7 +22,7 @@ class EncuestaImagen extends Model
 
     ];
     protected $table = "encuestaimagenes";
-    public function candidatos()
+    public function candidatos(): BelongsTo
     {
         return $this->belongsTo(Candidato::class,'id');
     }

@@ -15,11 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('texto')->nullable();
             $table->string('ip')->nullable();
-            $table->unsignedBigInteger('pregunta_id')->nullable();
+            $table->string('pregunta_id')->nullable();
             $table->string('fecha')->nullable();
-            $table->foreign('pregunta_id')
-            ->references('id')->on('preguntas')
-            ->onDelete('set null');
+            $table->string('pregunta')->nullable();
+            $table->string('origen')->nullable();
             $table->timestamps();
         });
     }

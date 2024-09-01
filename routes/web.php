@@ -1,28 +1,37 @@
 <?php
 
 use App\Http\Controllers\CandidatosController;
+use App\Http\Controllers\DebateController;
 use App\Http\Controllers\DiputadoController;
 use App\Http\Controllers\SenadorController;
 use App\Http\Controllers\TapaController;
 use App\Http\Controllers\VotoController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('tapa');
-// });
+//  Route::get('/', function () {
+//      return view('tapa');
+//  });
 
 //TAPA CONTROLADOR
  Route::controller(TapaController::class)->group(function(){
      Route::get('/','index')->name('tapa');
      Route::get('/encuesta-existeip', 'existeipencuesta' )->name('encuesta.existeip');
      Route::get('/respuesta-existeip', 'existeiprespuesta' )->name('respuesta.existeip');
+     Route::get('/respuesta-existeipsino', 'existeiprespuestasino' )->name('respuesta.existeipsino');
+     Route::get('/respuesta-existeipgeneral', 'existerespuestageneral' )->name('respuesta.existeipgeneral');
      Route::get('/pregunta-existe', 'buscarrespuestas' )->name('pregunta.buscarrespuestas');
+     Route::get('/preguntasino-existe', 'buscarrespuestassino' )->name('pregunta.buscarrespuestassino');
      Route::post('registro-encuesta','registrar_encuesta')->name('encuesta.registrar');
      Route::post('lista-comentarios','listar_comentarios')->name('comentarios.lista');
      Route::post('lista-preguntas','listar_preguntas')->name('preguntas.lista');
      Route::post('registro-pregunta','registrar_respuesta')->name('pregunta.registrar');
+     Route::post('registro-preguntasino','registrar_respuesta_si_no')->name('pregunta.registrarsino');
+     Route::post('registro-preguntageneral','registrar_respuestatresgeneral')->name('pregunta.registrargeneral');
      Route::post('registro-comentarios','registrar_comentarios')->name('comentarios.registrar');
      Route::post('obtener-preguntas-por-id','obtener_preguntas_por_id')->name('preguntas.obtener_pregunta');
+     Route::post('registro-preguntatres','registrar_respuestatres')->name('preguntatres.registrar');
+     Route::get('cookies', 'cookies' )->name('cookies');
+
  });
 
 //CANDIDATOS CONTROLADOR
@@ -63,6 +72,13 @@ Route::controller(SenadorController::class)->group(function(){
     //Route::delete('eliminar-candidatos-por-id','eliminar_candidatos_por_id')->name('candidatos.eliminar_candidatos');
 });
 
-
-
-
+//DEBATE CONTROLADOR
+Route::controller(DebateController::class)->group(function(){
+    Route::get('debate-index','index')->name('debate.index');
+    Route::post('debate-registrar','registrar_debate')->name('debate.registrar');
+    //Route::post('lista-senador','listar_senador')->name('senador.lista');
+    //Route::post('registro-senador','registrar_senador')->name('senador.registrar');
+    Route::get('debate-existeip', 'existeip' )->name('debate.existeip');
+    //Route::post('obtener-candidatos-por-id','obtener_candidatos_por_id')->name('candidatos.obtener_candidatos');
+    //Route::delete('eliminar-candidatos-por-id','eliminar_candidatos_por_id')->name('candidatos.eliminar_candidatos');
+});

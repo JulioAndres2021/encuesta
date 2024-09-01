@@ -8,13 +8,25 @@
     <meta name="description" content="Encuesta de Candidatos Provinciales">
     <meta name="author" content="Julio Andres 2024">
 
-    <title>Candidato a Diputado</title>
-    <!--FONT-AWESONE-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSBXQ37N');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Icono de una casa de Material Icons -->
+    <title> Encuesta para la Provincia de La Pampa 2025</title>
+    <link rel="shortcut icon" href="{{asset('Front/images/manos.png')}}" type="image/x-icon">
+    <!-- Enlaza Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Enlaza Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS FILES
+    <link rel="preconnect" href="https://fonts.googleapis.com">-->
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,19 +34,33 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('Front/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{asset('Front/css/bootstrap.min.css')}}">
 
-    <link rel="stylesheet" href="{{ asset('Front/css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{asset('Front/css/bootstrap-icons.css')}}">
 
-    <link rel="stylesheet" href="{{ asset('Front/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{asset('Front/css/owl.carousel.min.css')}}">
 
-    <link rel="stylesheet" href="{{ asset('Front/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{asset('Front/css/owl.theme.default.min.css')}}">
 
-    <link href="{{ asset('Front/css/templatemo-pod-talk.css') }}" rel="stylesheet">
+    <link href="{{asset('Front/css/templatemo-pod-talk.css')}}" rel="stylesheet">
 
+   <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFMB3P3V9K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LFMB3P3V9K');
+    </script>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSBXQ37N"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!--PORTADA DE CANDIDATOS-->
     <section>
         <!--CONTENEDOR DE 2 SECCIONES RESPONSIVE-->
@@ -170,6 +196,7 @@
 
                                         {{-- <label class="mb-3">ID Candidadato</label> --}}
                                         <input type="hidden" class="form-control" name="diputado_id" id="id_del_candidato">
+                                        
                                     </div>
                                     <div class="mb-3">
                                         {{-- <label for="ip" class="form-label">IP</label> --}}
@@ -201,7 +228,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                {{-- <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     <div class="subscribe-form-wrap">
                         <h6>Subscribite. Cada Semana.</h6>
 
@@ -214,16 +241,16 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
                     <h6 class="site-footer-title mb-3">Contácto</h6>
 
-                    <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 0000-000000</p>
+                    {{-- <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> en proceso</p> --}}
 
                     <p>
                         <strong class="d-inline me-2">Email:</strong>
-                        <a href="#">@gmail.com</a>
+                        <a href="#">contacto@encuestasonline.online</a>
                     </p>
                 </div>
 
@@ -242,20 +269,20 @@
                         </div>
                     </div> --}}
 
-                    <h6 class="site-footer-title mb-3">Social</h6>
+                     <h6 class="site-footer-title mb-3">Social</h6>
 
                     <ul class="social-icon">
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
+                            <a href="https://instagram.com/encuestaonline2025" target="_blank" class="social-icon-link bi-instagram"></a>
                         </li>
 
-                        <li class="social-icon-item">
+                        {{-- <li class="social-icon-item">
                             <a href="#" class="social-icon-link bi-twitter"></a>
                         </li>
 
                         <li class="social-icon-item">
                             <a href="#" class="social-icon-link bi-whatsapp"></a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
 
@@ -274,7 +301,7 @@
                 <div class="col-lg-7 col-md-9 col-12">
                     <ul class="site-footer-links">
                         <li class="site-footer-link-item">
-                            <a href="#" class="site-footer-link">Inicio</a>
+                            <a href="#paginadeinicio" class="site-footer-link">Inicio</a>
                         </li>
 
                         {{-- <li class="site-footer-link-item">
@@ -285,17 +312,17 @@
                             <a href="#" class="site-footer-link">Help Center</a>
                         </li> --}}
 
-                        <li class="site-footer-link-item">
+                        {{-- <li class="site-footer-link-item">
                             <a href="#" class="site-footer-link">Contáctanos</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-12">
-                    <p class="copyright-text mb-0">Copyright © 2024 Julio Andres
+                    <p class="copyright-text mb-0">Copyright © 2024 J A
                         <br><br>
                         Diseño: <a rel="nofollow" href="#" target="_parent">J.A</a>
-                    </p> Distribución: <a rel="nofollow" href="#" target="_blank">Texto de la página</a>
+                    </p> Distribución: <a rel="nofollow" href="https://www.hostinger.com.ar/" target="_blank">Hostinger</a>
                 </div>
             </div>
         </div>

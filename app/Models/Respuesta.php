@@ -13,7 +13,8 @@ class Respuesta extends Model
         'texto',
         'ip',
         'pregunta_id',
-        'fecha'
+        'fecha',
+        'pregunta'
 
     ];
     protected $table = "respuestas";
